@@ -15,7 +15,7 @@ func Sqrt(x float64, p float64) (float64, int) {
 	for math.Abs(z-d) > p {
 		i++
 		d = z
-		z = z - ((z*z - x) / 2 * z)
+		z -= (z*z - x) / (2 * z)
 	}
 	return z, i
 }
